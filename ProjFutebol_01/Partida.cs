@@ -43,10 +43,11 @@ namespace ProjFutebol_01
             {
                 this.timeCasa.Vitorias = 1;
                 this.timeVisitante.Derrotas = 1;
-                return "O Vencedor da partida em " + this.data.ToString("dd-MM-yyyy") +
-                        " foi o time " + this.timeCasa.Nome + " com o placar de " +
-                        this.placarCasa + " a " +
-                        this.placarVisitante;
+                return "O Vencedor da partida em "+this.data.ToString("dd-MM-yyyy")+
+                    " entre " + this.timeCasa.Nome + "x"+this.timeVisitante.Nome +
+                    " foi o time "+this.timeCasa.Nome+
+                    " com o placar de "+this.placarCasa.ToString()+
+                    " a "+this.placarVisitante.ToString()+"." ;
             }
 
             if (this.placarCasa == this.placarVisitante)
@@ -62,9 +63,10 @@ namespace ProjFutebol_01
             this.timeVisitante.Vitorias = 1;
             this.timeCasa.Derrotas = 1;
             return "O Vencedor da partida em " + this.data.ToString("dd-MM-yyyy") +
+                       " entre " + this.timeVisitante.Nome + "x" + this.timeCasa.Nome +
                        " foi o time " + this.timeVisitante.Nome +
-                       " com o placar de " + this.timeVisitante + " a " +
-                       this.timeCasa;
+                       " com o placar de " + this.placarVisitante + " a " +
+                       this.placarCasa;
         }
 
         public void jogar()
